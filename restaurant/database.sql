@@ -1,7 +1,3 @@
--- Restaurant POS
--- Rebuilds the database from scratch
--- Warning: this deletes the whole database and creates it again
--- Import with: mysql.exe -u root --host=127.0.0.1 --port=3308 < database.sql
 
 DROP DATABASE IF EXISTS restaurant;
 
@@ -51,7 +47,6 @@ CREATE TABLE order_item (
     FOREIGN KEY (id_item) REFERENCES menu_item(id_item)
 );
 
--- Test user: admin@restaurant.com / admin123
 INSERT INTO `user` (first_name, last_name, email, password) VALUES
 ('Admin', 'Restaurant', 'admin@restaurant.com', '$2y$10$ZR1so6PJZAP2nmYCFYnfOOLiQxEW0SMYzQd.dtTjMMy5B48AVl3dS');
 
